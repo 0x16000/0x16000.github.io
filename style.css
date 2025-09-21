@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: #000;
+    color: #fff;
+    min-height: 100vh;
+    overflow-x: hidden;
+    line-height: 1.8;
+}
+
+/* Animated stars background */
+.stars, .stars2, .stars3 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.stars {
+    background: transparent url('data:image/svg+xml,%3Csvg width="2" height="2" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="1" cy="1" r="1" fill="white"/%3E%3C/svg%3E') repeat;
+    background-size: 50px 50px;
+    animation: drift 200s linear infinite;
+    opacity: 0.3;
+}
+
+.stars2 {
+    background: transparent url('data:image/svg+xml,%3Csvg width="3" height="3" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="1.5" cy="1.5" r="1" fill="white"/%3E%3C/svg%3E') repeat;
+    background-size: 100px 100px;
+    animation: drift 150s linear infinite;
+    opacity: 0.2;
+}
+
+.stars3 {
+    background: transparent url('data:image/svg+xml,%3Csvg width="4" height="4" xmlns="http://www.w3.org/2000/svg"%3E%3Ccircle cx="2" cy="2" r="1" fill="white"/%3E%3C/svg%3E') repeat;
+    background-size: 150px 150px;
+    animation: drift 100s linear infinite;
+    opacity: 0.1;
+}
+
+@keyframes drift {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-2000px); }
+}
+
+.container {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    z-index: 1;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #333;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 300;
+    letter-spacing: 5px;
+    background: linear-gradient(45deg, #b388ff, #7c4dff, #536dfe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #888;
+    letter-spacing: 2px;
+    font-size: 0.9em;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #7c4dff;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 400;
+}
+
+p {
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul li {
+    color: #ccc;
+    padding: 5px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+ul li:before {
+    content: ">";
+    position: absolute;
+    left: 0;
+    color: #7c4dff;
+}
+
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skill {
+    border: 1px solid #7c4dff;
+    color: #b388ff;
+    padding: 5px 15px;
+    border-radius: 3px;
+    font-size: 0.9em;
+    transition: all 0.3s;
+}
+
+.skill:hover {
+    background: #7c4dff;
+    color: #000;
+    box-shadow: 0 0 10px #7c4dff;
+}
+
+.highlight {
+    color: #b388ff;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 60px;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+}
+
+.contact {
+    color: #7c4dff;
+    text-decoration: none;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    transition: all 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid #7c4dff;
+    border-radius: 3px;
+}
+
+.contact:hover {
+    background: #7c4dff;
+    color: #000;
+    box-shadow: 0 0 20px #7c4dff;
+    transform: translateY(-2px);
+}
+
+/* Glow effect on scroll */
+section {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+section:nth-child(2) { animation-delay: 0.1s; }
+section:nth-child(3) { animation-delay: 0.2s; }
+section:nth-child(4) { animation-delay: 0.3s; }
+section:nth-child(5) { animation-delay: 0.4s; }
+section:nth-child(6) { animation-delay: 0.5s; }
+section:nth-child(7) { animation-delay: 0.6s; }
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+        letter-spacing: 2px;
+    }
+    
+    .container {
+        padding: 20px 15px;
+    }
+}
