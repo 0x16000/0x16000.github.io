@@ -21,13 +21,15 @@
 
 body {
     font-family: 'JetBrains Mono', 'Courier New', monospace;
-    background: var(--dark-bg);
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
     color: #fff;
     min-height: 100vh;
     overflow-x: hidden;
     line-height: 1.8;
     position: relative;
 }
+
 
 /* Enhanced animated background with particle system */
 .stars, .stars2, .stars3 {
