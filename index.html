@@ -51,6 +51,25 @@
         .contact p {
             margin: 10px 0;
         }
+        
+        .profile-picture {
+            margin-bottom: 30px;
+        }
+        
+        .profile-picture img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid rgba(0, 212, 255, 0.3);
+            transition: all 0.3s ease;
+            object-fit: cover;
+        }
+        
+        .profile-picture img:hover {
+            border-color: rgba(0, 212, 255, 0.8);
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -59,6 +78,10 @@
     <div class="cursor-dot"></div>
     
     <div class="container">
+        <div class="profile-picture">
+            <img src="pfp.png" alt="0x16000's Profile Picture">
+        </div>
+        
         <h1>Hi, I'm 0x16000</h1>
         
         <p>Welcome to my personal page. I'm a systems expert and programmer with a passion for low-level development.</p>
