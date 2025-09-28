@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me</title>
+    <!-- External CSS Files -->
+    <link rel="stylesheet" href="page.css">
+    
+    <!-- Basic styling and fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
         
@@ -49,6 +53,10 @@
     </style>
 </head>
 <body>
+    <!-- Custom cursor elements -->
+    <div class="cursor"></div>
+    <div class="cursor-dot"></div>
+    
     <div class="container">
         <h1>Hi, I'm 0x16000</h1>
         
@@ -58,7 +66,7 @@
         <p>I love programming and playing football. In my free time, I enjoy exploring new technologies and working on personal projects. I'm based in Rheinland-Pfalz, Germany, where I specialize in operating systems development, software development, and general low-level programming.</p>
         
         <h2>Interests</h2>
-        <p>Some things I'm passionate about: Programming (especially systems-level), Football, and Security Research. I'm always interested to learn new technologies and connect with developers.</p>
+        <p>Some things I'm passionate about: Programming (especially systems-level), Football, and Security Research. I'm always eager to learn new technologies and connect with fellow developers.</p>
         
         <div class="contact">
             <h2>Get in Touch</h2>
@@ -66,5 +74,19 @@
             <p>Discord: visualyyy</p>
         </div>
     </div>
+    
+    <script>
+        // Custom cursor functionality
+        const cursor = document.querySelector('.cursor');
+        const cursorDot = document.querySelector('.cursor-dot');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            cursorDot.style.left = e.clientX + 'px';
+            cursorDot.style.top = e.clientY + 'px';
+        });
+    </script>
 </body>
 </html>
